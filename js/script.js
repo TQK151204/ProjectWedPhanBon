@@ -32,5 +32,25 @@ var swiper = new Swiper(".home-slider", {
 
     
   });
+  // Hàm hiển thị trang
+function showPage(pageNumber) {
+  // Ẩn tất cả các trang
+  const pages = document.querySelectorAll('.page-content');
+  pages.forEach(page => {
+      page.style.display = 'none';
+  });
+
+  // Hiển thị trang được chọn
+  const activePage = document.getElementById(`page-${pageNumber}`);
+  if (activePage) {
+      activePage.style.display = 'block';
+  }
+}
+
+// Hiển thị page 1 khi trang được tải
+window.onload = function() {
+  showPage(1);
+};
+
 
   
