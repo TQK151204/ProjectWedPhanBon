@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="vi">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang Web</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="../css/stylesProductDetail.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle"
+            class="acount" />
+    </head>
+
+    <body>
+
+        <header>
+            <img src="../image/logo.jpg" alt="Logo" class="logo">
+            <nav class="navbar">
+                <a class="active" href="index.html">Trang Chủ</a>
+                <a href="#introduction"> Giới Thiệu </a>
+                <a href="product.html">Sản Phẩm</a>
+                <a href="#contact">Liên Hệ</a>
+
+
+            </nav>
+            <div class="icons">
+                <i class="fa fa-bars" aria-hidden="true" id="menu-bars"></i>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <i class="fas fa-search" aria-hidden="true" id="search-icon"></i>
+                <a href="#" class="fas fa-user" id="account-icon"></a>
+
+
+
+            </div>
+        </header>
+
+        <form action="" id="search-form">
+            <input type="search" placeholder="Tìm kiếm tại đây" name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+
+        <img src="../image/foder.jpg" alt="imageProductSlide">
+
+        <!-- Chi Tiết Sản Phẩm -->
+        <section id="product-detail">
+            <div class="detail-container">
+                <!-- Hình Ảnh -->
+                <div class="image-container">
+                    <img src="../image/sanphambanchay4.jpg" alt="Phân Bón Hữu Cơ">
+                </div>
+
+                <!-- Nội Dung -->
+                <div class="content-container">
+                    <h1 class="product-title">Phân Bón Hữu Cơ Powerfeed</h1>
+                    <p class="product-price">75,000 VND</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="product-description">
+                        Phân bón hữu cơ Powerfeed cung cấp dinh dưỡng hoàn hảo cho cây trồng, giúp cây phát triển bền
+                        vững
+                        và tăng cường sức đề kháng.
+                    </p>
+
+                    <div class="action-container">
+                        <input type="number" value="1" min="1" class="quantity-input">
+                        <a href="cart.html" class="btn-add-to-cart">Thêm Vào Giỏ Hàng</a>
+                    </div>
+
+                    <div class="product-details">
+                        <h3>Thông Tin Sản Phẩm</h3>
+                        <ul>
+                            <li>Loại sản phẩm: Phân bón hữu cơ</li>
+                            <li>Trọng lượng: 1kg</li>
+                            <li>Xuất xứ: Việt Nam</li>
+                            <li>Thành phần: 100% tự nhiên</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Footer -->
+        <footer id="footer" style="margin-top: 20px;">
+            <div class="footer-container">
+                <!-- Thông tin liên hệ -->
+                <div class="footer-section">
+                    <h3>Thông tin liên hệ</h3>
+                    <ul>
+                        <li>Địa chỉ: 123 Đường XYZ, TP. Hồ Chí Minh, Việt Nam</li>
+                        <li>Điện thoại: <a href="tel:+84987654321">+84 987 654 321</a></li>
+                        <li>Email: <a href="mailto:info@phanbon.com">info@phanbon.com</a></li>
+                    </ul>
+                </div>
+
+                <!-- Liên kết quan trọng -->
+                <div class="footer-section">
+                    <h3>Liên kết quan trọng</h3>
+                    <ul>
+                        <li><a href="/privacy-policy">Chính sách bảo mật</a></li>
+                        <li><a href="/terms-of-service">Điều khoản sử dụng</a></li>
+                        <li><a href="/faq">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mạng xã hội -->
+                <div class="footer-section">
+                    <h3>Liên kết mạng xã hội</h3>
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i>
+                                Facebook</a>
+                        </li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i>
+                                Instagram</a>
+                        </li>
+                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>
+                                LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- Thông tin bản quyền -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Phân Bón XYZ. All rights reserved.</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="../js/script.js"> </script>
+
+
+    </body>
+
+
+    </html>
+
+</body>
+
+</html>
