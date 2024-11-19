@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="vi">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang Web</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="../css/stylesManageUser.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle"
+            class="acount" />
+    </head>
+
+    <body>
+
+        <header>
+            <img src="../image/logo.jpg" alt="Logo" class="logo">
+            <nav class="navbar">
+                <a class="active" href="index.html">Trang Chủ</a>
+                <a href="#introduction"> Giới Thiệu </a>
+                <a href="product.html">Sản Phẩm</a>
+                <a href="#contact">Liên Hệ</a>
+
+
+            </nav>
+            <div class="icons">
+                <i class="fa fa-bars" aria-hidden="true" id="menu-bars"></i>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <i class="fas fa-search" aria-hidden="true" id="search-icon"></i>
+                <a href="#" class="fas fa-user" id="account-icon"></a>
+
+
+
+            </div>
+        </header>
+
+        <form action="" id="search-form">
+            <input type="search" placeholder="Tìm kiếm tại đây" name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+
+        <img src="../image/foder.jpg" alt="imageProductSlide">
+
+        <!-- Quản Lý Người Dùng -->
+        <section id="manage-user">
+            <div class="manage-container">
+                <h1>Quản Lý Người Dùng</h1>
+                <button class="btn-add-user">Thêm Người Dùng</button>
+
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Người Dùng</th>
+                            <th>Email</th>
+                            <th>Vai Trò</th>
+                            <th>Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>nguyenvana@example.com</td>
+                            <td>Admin</td>
+                            <td>
+                                <button class="btn-edit">Chỉnh Sửa</button>
+                                <button class="btn-delete">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Trần Thị B</td>
+                            <td>tranthib@example.com</td>
+                            <td>User</td>
+                            <td>
+                                <button class="btn-edit">Chỉnh Sửa</button>
+                                <button class="btn-delete">Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- Footer -->
+        <footer id="footer" style="margin-top: 20px;">
+            <div class="footer-container">
+                <!-- Thông tin liên hệ -->
+                <div class="footer-section">
+                    <h3>Thông tin liên hệ</h3>
+                    <ul>
+                        <li>Địa chỉ: 123 Đường XYZ, TP. Hồ Chí Minh, Việt Nam</li>
+                        <li>Điện thoại: <a href="tel:+84987654321">+84 987 654 321</a></li>
+                        <li>Email: <a href="mailto:info@phanbon.com">info@phanbon.com</a></li>
+                    </ul>
+                </div>
+
+                <!-- Liên kết quan trọng -->
+                <div class="footer-section">
+                    <h3>Liên kết quan trọng</h3>
+                    <ul>
+                        <li><a href="/privacy-policy">Chính sách bảo mật</a></li>
+                        <li><a href="/terms-of-service">Điều khoản sử dụng</a></li>
+                        <li><a href="/faq">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mạng xã hội -->
+                <div class="footer-section">
+                    <h3>Liên kết mạng xã hội</h3>
+                    <ul class="social-links">
+                        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i>
+                                Facebook</a>
+                        </li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i>
+                                Instagram</a>
+                        </li>
+                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i>
+                                LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- Thông tin bản quyền -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Phân Bón XYZ. All rights reserved.</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="../js/script.js"> </script>
+
+
+    </body>
+
+
+    </html>
+
+</body>
+
+</html>
