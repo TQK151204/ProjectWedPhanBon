@@ -28,22 +28,43 @@
             <img src="../image/logo.jpg" alt="Logo" class="logo">
             <nav class="navbar">
                 <a class="active" href="index.html">Trang Chủ</a>
-                <a href="#introduction"> Giới Thiệu </a>
-                <a href="product.html">Sản Phẩm</a>
+                <a href="#introduction">Giới Thiệu</a>
+                <!-- Sản phẩm với menu thả xuống -->
+                <div class="dropdown">
+                    <a href="product.html">Sản Phẩm</a>
+                    <div class="dropdown-menu">
+                        <a href="product1.html">Phân bón hữu cơ</a>
+                        <a href="product2.html">Phân bón vô cơ</a>
+                        <a href="product3.html">Phân bón vi sinh</a>
+                    </div>
+                </div>
                 <a href="#contact">Liên Hệ</a>
-
-
             </nav>
             <div class="icons">
                 <i class="fa fa-bars" aria-hidden="true" id="menu-bars"></i>
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <i class="fas fa-search" aria-hidden="true" id="search-icon"></i>
-                <a href="#" class="fas fa-user" id="account-icon"></a>
-
-
-
+        
+                <!-- Menu tài khoản -->
+                <div class="account-menu">
+                    <div class="dropdown">
+                        <a href="#" class="fas fa-user" id="account-icon"></a>
+                        <!-- Menu thả xuống -->
+                        <div class="dropdown-menu">
+                            <a href="login.html">Đăng nhập</a>
+                            <a href="register.html">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
+        
+        <form action="" id="search-form">
+            <input type="search" placeholder="Tìm kiếm tại đây" name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+        
 
         <form action="" id="search-form">
             <input type="search" placeholder="Tìm kiếm tại đây" name="" id="search-box">
@@ -52,15 +73,31 @@
         </form>
         <img src="../image/foder.jpg" alt="imageProductSlide">
 
-        <div class="pages">
+        <div class="pages"> 
             <div id="page-1" class="page-content">
                 <section id="product">
                     <h2>Sản Phẩm</h2>
-                    <div class="product-container">
+                    <div  class="product-container">
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <a href="productDetails.html">
+
+                            <img src="../image/sanphambanchay4.jpg " class="product-img">
+                        </a>
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i> 
+                            </div>
+                            <a href="productDetails.html" class="btn-order">Mua</a>
+                        </div>
+                        <div class="product-item">
+                            <img src="../image/sanphambanchay5.jpg" alt="" class="product-img">
+                            <h3 class="product-name">Phân Bón SFARM</h3>
+                            <p class="product-price">250,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -71,9 +108,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIPDxUQEBASEBAQEhYWEBAWDQ8QFhUWFhgWFhUSFRUYHSggGRspHRgWITIhJSorLi4vFx8zODMtNygtLisBCgoKDg0OGxAQGzEmHyY1LS0tLS0tLTUtNystLy8tLy8vLS0vLTYtLS0tLS0tLS0tLS0tLy0tLS0tLS0tLS0tLf/AABEIAMIBAwMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQIEBQYDB//EAEkQAAEEAQIDBQQGBAkMAwAAAAEAAgMRBBIhBRMxBiJBUWEUcYGRIzKhscHRB0JU8DNEUmKCg5Ky0xUWJENjcpOUosLS4SU0c//EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EACkRAQEAAgECBAQHAAAAAAAAAAABAhEDITESE0FRBCJh8BQycYGhscH/2gAMAwEAAhEDEQA/APsaIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIChzgOpA95pStbx3H5kYFA0b3A8vUFBniVp6OB/pBWC4fI4c6M09rWn1DR/2LFErP1XRu/3SH/3VXZej6HSLgIZS40whxHUNLSR7xrsL2OROwE29oAsnVpAA6k99Tsdyi+fx8clcdLJy4noGzBxPwAK9TxTLHjL8pP8ACUeJOndouCPF8vzk/sy/4KDiuX5y/KT8Yk8Rp3qUuFbn5R680/A/kFDpJndWv/st/wAQJ4jTu1UuA8R81wnKeerT8dvumKn2Y+LW/wBofi0ps07oPB6EH4hWXL8Exy17XU0AuAoFtnbrQYNl1CmIERFIIiICIiAiIgIiIIRQiCUUIglFCIJRQiCV55MetpHy96uiDguPcR5cz8fJlbHFyWGJsjA9r3Oc63UQb06W0PDV7lro+LRMB1Zg0gd14iaRYokNrckCtv53oa6DtOYcnJ5MkTnFgBa+mDRtWoEm6+Bta4cC/kTjT5Ohjf8APSWqlw69HPbyenX7/VqTxrFkcBJlPcBek+zOYWk3TmvA1NI9PL3rfcPa6fFHMO8kZBcABYNtDwCKFinfFUj4LA11SHVTQS3Q2OPe+oG5PdO1kUN+q3b4wWlpaHNIotIBBHkQo1V+Lxb3l9/y5Ls92VhxpnSRPceW7S3vNIosbYdt1snp6eq6gMP7lYPCeCtx3EjvB29Gu4fJu3Tr7lm8RzmY8Rkf0HQb7k9Gigeqph4tdZp1Z3xZd9vQQE+IH9JYmfNHF3XzxMeRtb+l3RK5GXtq9n0kltZv3Q2MedVdmz+CwW9qsAuMz8SR8jzZ73d1H0PQndZcnLlJ8sa/hsozuKcI4nOxpa+CUMb1ZkuaS7vd6tIHjXuC5rD4rNiShvMOqIct0T3l7QAPqta0+Fdb8Fs83j+TkVBiYr4HbuDGzRkmMAfqkCj3gep28FpOyuCBlyP4jCWRNB1PmbKxuvUGtGr6rj18wdyFlhjneuTky45brHu7zs3xN+W13MZpdGR3gHBrgboi/cV0TGBotczwvtDw9g5MMojaHGgWyNZ/KJ1O2A95C37ZNTC7w2r1XZhfl79WmXHnhqZRuOAwlxMzv91g+8/h81uVgcE/+uz+l9r3FZy0nZRKKEUiUUIglFCIJRQiCUUKUEIoRBKKEQSihEEooRBKKEQc5x3g8cjuY9pLgaDtbmkCtgCKoblarI4HHp1Rx73b+++y39ZrR0sgAfHzpdF2k4hFBEObM2Ivd3dVb0N6tc/Bx/G/bIv+lLcd9WN8E6Vb2UTSXJjvaXOGp/MeBTRsfUbVvX1unVTjPkiOlmO8RgENBkc7ckEudYvpVb7b/DJPF8er9rjrzpqx3doMX9ti/wClLZPVEyx9/wCmTk5cjXlrYHPAqnagAbH2b/j6Xh5kHt+O+JzTCQ4AG9VPbRO211dKf84Mb9ti+bVRnHMVopuXEBZNDT1O5Wdyx92uPJJdzJpeIdlWMbDHqLnSkRPc4gjZj3WBV+G3kB6qkXYrEhOqSRz2taNYJu3Fxo0B02qvVbHJ4lFJKHMyGSNbGS4gimaT9bbpsTv6LWSZkQbK/nAxF7tEnQOJtwF++x8FXwY3q2vPb6tw/i0YfqDXFukNbTQNhvsD0C0HbLh83EREMZzdDLJjeSwlxrcEAg0L2sfFYo4zBpH0jdv55/8AFbDhXaDHB70zGgXVv8/goyk9zj5pjdyxwY7J5hkAZGDvQdzWBtbd42brfyvY7dL+ncAEkODDFO4GYN724OkWaaSNiQKF+ixY8tkTQ+R4Y0AW4mhuKCxsPjWKXOLsmLoAO+PUmvsVspMbpbP4i5z5n0zgrC3HjB66bP8ASJd+KzV5Y7w5jS020tBaR0IIBBHwXotWKUUIglFCIJRQiCUUIglFCIIRQiCUUIglFCIJRQiCUUIg+Vfpdnc/LghaC6orDQCSXPeRQHie6FXA7GCEsOa+QOe2+XFywG9dnSO2J8wBtY3Nhdjx3Fx2ZXt0rS5+LHGavu1qkIr+dsfsWFm8ehzJGmCaBrAyyZJIYngk7scJO9pqugo+qwvFj4rlle/aPLywxueW+7zj7KxzxuOO4tLXAMD5A9tV3r0tu7pfO+PYb8fJkhlrWw0SOhBALSPQggr6Jm9oMeBwlky25MrCS2OH6SzttrvSwbAHzHmvmvG+Juysh88lB0jrodAAAGtHuAAWfxdwuMk7sOXHDHt3/wAY4Kq568uYvN0i5IpHvHmPZehxbqFOrxHkVX2x+jl6jou9NCr8/NY5KkK260mV91nOWM5e7ui8EiGRlcTmmby3vBZYJFV06K/D8AyNcI2ue8Au0tY5599D4LDA3W+7F4xOTqBnuNodUM0MRdT2915kc0Fh8Rfktt3K9XRLc7Ja+2dlWuGBjB4IcMaIOBBBB0DYg9CtqvLHZpY1u5poFk2enivRdsmo9KTU0lFCKUpRQiCUUIglFCIJRQiCEVUQWRVRBZFVEFkVUQWRVRBxf6QOIthdEHjVG6aF0zNIdqjjc5zm0djfkdlzEfGMOf6N2C4kyamNiiaXmgzvUzQCSGvsaa+0rP8A0kyD2+BslcsNic/UHFunmPDtQG9V5br2m4jgtkLoJMOPIMX0TjCDBH3xqa5zGN1Es6W2xR81z57uXePKt3yZ9Z3aHjPE8GZspjx5GyyAlkhsFr6hA2EhGk1Nex+s31XtxDjfDXule3FlDpWOFhugG9dAAS0w3yzq3BDSNItbpmbwh0gtsOkzyODzEK2Y0VIHCzG5xeRfQhq0PHJsR2FULsdoDIeXE2Ae06wfp+ZIRY23u6NfOmUs3dxWzW7uMVvGOHtnLmYrhC6J7HRlpN3M1zHbyWDyxRII39F6u43w50bInY8pY3/ZsJbs36ruZZshxO4+t6LavyOHcxp1YXIs8mMYo1hnIePp3ObermV1veisfGbwxrMePmY5fjPidM8xWJg++cHOIp7QXAgeAbSjV941kvvGkxc3h4Hfx3k8yU3pc7unVyekzdm9221vX1vA6niEzJJnvjZy43OPLjoDSzo0GvGqs+Jvquykn4WYSWsYNUOQSwMj5rXufGWtje5p32fpPgFz3agwuy3nG0CHTHp0Na1t8turYAC7u/W1nnNTvP2U5Jqd5+zTu6LHWU8bLG0rOMVF0XY0O9o1MxmZLmM1APlbG2Oi36Yudtt+K54Bb7sttK53Onh5cReXwsDzQc0HWDsW7+Por492vH+aPvWM/VG123eY07O1DcA7O8R6r1XjitIjYCSSGNBJDQSQBZIGw9w2XovRessiqiCyKqILIqogsiqiCyhQpQVRRaWglFFoglFCIJRRaIJRRaIOD7dYbJc2Bsl1K6CLY0adJIXUfcPtVM7srwqCSOKZ8zJJzUTdb3ajYHUNIG5HVe3bQ/8AyOEP9vF/fNfiukz5spr2ezQwyNo6zJIWEHaqr4pMZb1jzphjcs7Z6+23zrtd2K9mngjxnuf7U4sYx5FtcKslwG7aPWtq8VtpOyXDcJjRmzkyP6EyOjBIq9LW7hvqbW47ZzQ42Xh5cjiHNlLC3WSOU5jw6QN8NJLbI8/HZa/tz2Ul4hLHPjyRkcsMIc8htWXNe0gG/rH5BUy45PFZN32R5WONyuOO77Ob7Z9jm4kYycZ5fASNQJDi3V9VwcPrNNgee463tyDWX6+i+pdrp48HhbMR7g+QsijaPFwYWl768G90j4hc9xHtFw5zPoMAxSCSNzX8mFtBkjXOFtde7QR8Vz8nFjvp0U5ePCZd9fRtcTsZiYsDZOISOL30NDXOADqvQ0MGp5Auz6dFqJeA42TnMx8GR3KMeuaQu1hoB3DbAN9BR8XDyK+j5mXM5sMmI2OZkj28x5fVQu3L2GxZ6efuK1udkwQcVh3a2XIgkY87Ak6ozFq9TpeAfHYeS0z4sf6+9unLhw6T06fe2pf2M4fIX40cjxkRtBceaXObfRzmkaT4bCuo6WF81zcN2PO+B/143Fproa6EehFH4r69g8DfHxOfMLm8uWMNYLOq6j1avQcv7V8t7XZbZs6aaM2xzwGuHQhrWs1D0Om/iseXGSb1pn8RhJjvWrv+Gpe3S70K3nCJTE55EByYpIXNniBc36Mlp1ahu2nBu/qtHM+wui7HSB7nxPMfLliMb2yTOh1BzmUI3NaTrsChW+6pJ1Y8c3X2/FP0bO6W9xvdPVuw7p93Reqx8GERxMjAoRxtaBZdQa0ACz16dV7r0HrJRRaIJRRaIJRRaIJRQloJUqtoghFW0tBZFW0tBZFW0tBZFW0tBZFW0tB8x/SnM5uUwtcWlkLXtIJBDg+TcEdCuPh7R5H7Zkf81N+a+o9u+FRTND5SGbBgea23cfH3ri5+yDWYpn50RDvqnYWLrrp9235Kbxb6vE5unJl+rmMzOL3a5JHPca77nuea6i3FeuJx6aAaIsmWJtXpbK9rdydwOgOxXtLwZgIHtOMdq+v0oXROn0oKDwVltHtOPZab7zabTgA26rxJHuKxsVmOuv8ArAnyTKeY+R0jndXuc57jXmTuehVGyNIsGx8/VbKPgYc0FuRjUSKaX0bIO1aeteXmn+R4x3faseqvY2AaG27enhY8uip4E+B4YPHZoRohyZY2us6WyvDfU0Nr9V4DIMzi5zy9xI1Oc4uJJ2BJO5/9KcvBEcmhr2SeTmUQNyKO2x26eqzsPCDR0G/Xut8OngqWei0k7PSfi07otD8mV0dbtM0hBB8DvuPQrTSTAmr93ytbuTHBFbb9e638lgT4AG4A2/mt/JVuLS6a89F2fYljoWPywWNjjjfre6IyuAZyy7Q0EU7vtF30JXGivHpYv5ro+xuMWZbwcg47hGeW/mNY025gdeoFrqZrOkjevRRhNVPD+aPt2JO2SNkjDbJGNcw+bXAEH5FetrE4bkCSCORpJa+Nrmk1ZBAIJr0WTa7nqRa0tU1JaJXtLVLS0F7S1S0tBe0tUtTaC1oq2iAiraWgsiraWgsiraWgsiraWgsiraWg4T9IuaWzRtBBDGatBFglziASPc1eHafjghxoI2MiDgwHTywQNIG9e/8AFdBx6Nr5HtcwvHJZVACiHPIJLtqsDbqvmvajIyC8vYO4w6QWuBII9fH4KOTmnHhu9/R5HJx5XluqxBxwtc4iOABzgS3kt2A07A9QO6D790bxsay4w427QNPIbW1gO99n49Fr35WsAuaC54bYB8PAnwG2/XwWywMKCfX9GBZJ1jUHX56guXDlyyvWLThvuxuIZ3NDQWRxht1ojDLLjZvz8Fr3SDz+1UyMZ/N0lzpGNFx2T02sDyOw29Fk48zQdLxs41YIv438FF5fZW8G73ZfD4RVkj5hZuseY+a8MQtlOlooDwJAr3j8V0mBw2NkVkbuNnvXfWvgnja4cEsaPWPMfNVlcNJsjp5rbzQBvWwLAFAm66+Hn9y1HF3Bsdj+Vseh6Hoq+Yv5H1c0512LG6z8p9QWSHHpf7+5euLBrGogny2Ne/1W24ByzkRBpGoTN28fDe/iq4Z+K6Vx4N9H2Dh0Yigjjb9WOJjR7mtAH3LIL1qsTN1xg+8H3tJafuVzkr0I9Hs2PMTWteJivRr0GZrU6ljNcrgoPfUpteYVggvalVCsglFFogqihEEooS0Eoq2loLIq2loLIq2jdzSDl+32eYowxguSQM29C52/wXzfheaBNy2uDyAQ4A6jbupNdOvVfVeNsZI/U7Q4NAA1QxvNC/FwuiuUyMuKKbltjYXuYX7YMYbQv9cir9LXPz8PmZb32c+PD12+Z5QvK5Y+rqcLGw7prT8Dv8FuWzhrdTSGgOqvlRaaJG5rwGy38HG8GSPnEwODiaBxo2Osde7VlYUnaTEum47CP/wYPwU+TbNSpvD9WkwwJg/f6t20GjpcKLvga9FrGyBjdBolpOmq3vxPl0XV4nGccxMAgaCGtBIxo33tvYpZUeVjuH8Gb36YEf5Kv4ezptHkfVxJcXOp3didGSKeWnUPEkGyNiKWRwzir2Qso03maGDUQNLQHONm9hv8l2pnxPGJxrrWAzfx8v33T2nDBrlO9P8AQYtr8lPk9NbWnFdd3Ot7aPjNPLHX+q5rmkDwJra/fSzhxGHMaGVpJvqKqzVgDr4V57LYk4Th0LfX/J0ZPh4V++698b2dn1eU83+th8r7219qXhl9U+XfcGGIAK7wAFHxoVXUi/DosHhDW+3McwAF0zbI8QCev7+C2+Xxl0UpaYITFbRfs8Dg0GPqCGm+8W9fXwCcL4nFJlcsiPVUJBGNDFpcZW2A5rQem32e+k+Esu5fqmY9XTcKl1RX5PkB6eEjvLp4LMC1/D+63T4l8p9/0jhf3LYRhdU7Na9mBe7GqkbFksYpQhrV6tapDVZAAVlVEFrS1VSglFCIKooRBNooS0EqLUWloJtQlqLQTax86csYS3qdr969i5Y2XFzG6bI9QaKD57x/tHFDJy5cgxvoOI9nkk2NgEadvArmeLcYxJxRzsvQRTmNxmBrut2CNx6Fd/xbsDi5cvNmMznaQ3+GIFAkjoL8Ssdv6M+HD/UvPvyZ/wAHKNI6vnWLlcPjHV8jrdvJER1DQ1tMFACieh+sVtsbtNgRgfRQFw6kxzb/ACiK7ePsBw9vTFaffJK773L1HYrBH8Ti+LAfvUjgx2uxuU2MDGGkNBJjyXXQrp7Oqf53Q9NePQFV7NkHxJH+q9V9Db2Rwh0w4B/UR/kvUdmsQdMWEf1Ef5KEvnQ7YQ/y4fX/AEfIonxP8F577L0PbOIjeWHoA4mPKOoAeNwH0+S+hHs5i/s0P/BZ+S83dlsM9cSD/gR/kmhw0XbDFu3uhf125E3U9TvD4r2HazAPVjHf1L3fK2Lrz2OwT/E4fhE0fcvN3YfAP8VZ8NQ+4pocZP2kwzMZGv5d6dNY7zVNAINgg7+Sxp+LYT2k+0Fsp0U8Y0xI0vBNmt9h0N14ea7R/wCjrh7v4u4e7JyB/wBy8X/owwD0EzfdkPP961PVDWdleMCR0cTcj2nS59v5MkRAedWk6/rePRfQMWO1oeAdhcfCeXxyTvs3pfK0t29GtF/FdWzbYCkSsxlK6rqTUgupVNSakF0tV1JqQWtFW0tBZFFqEEIotLQSii0tBKKLS0BFCWgJSWiCNKjSpS0EaFGhWtLQV0JoVrRBXQE0BWRBXQE0BWRBGgJoU2iCNKnSpRBFJSm0QRSmlKIIpKUogikUoghFKIIREQEREBERBCIiAiIgKERAREQEREBERAUoiAiIgIiIClEQEREBERAREQEREH//2Q==" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón hữu cơ Sông Gianh BO-60</h3>
+                            <p class="product-price">250,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -84,9 +121,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://songgianh.com.vn/upload/attachment/2203ga-mat-truoc.jpg" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón hữu cơ Sông Gianh GA - 50</h3>
+                            <p class="product-price">275,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -97,9 +134,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbSJmOl7sUPtW6EtYBTSl5dZMz8-8NEHJwjA&s" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón hữu cơ học trường sinh </h3>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -110,9 +147,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://thuanlong.net/wp-content/uploads/2021/12/phan-bon-huu-co-mai-thien-thanh-mat-truoc_9bf59b7d4f5c4786a6a15b820269d1a9_master.png" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón hữu cơ đạm cá (Dạng bột)</h3>
+                            <p class="product-price">175,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -123,9 +160,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxNLExzmQNgVAIo57JkVI4lBM91ek6EG6ZZA&s" alt="" class="product-img">
+                            <h3 class="product-name">Phân Bón hữu cơ Đạm Cá </h3>
+                            <p class="product-price">155,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -136,9 +173,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://songgianh.com.vn/upload/attachment/91163d-doi-55.png" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón hữu cơ Sông Gianh DOI-55</h3>
+                            <p class="product-price">175,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -149,9 +186,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzWUxib73eF4ctNIPu7iutORUjO-dRdRaSPuDUVpBAvFop78LGxl1cdCuJbo6n4tkVOcM&usqp=CAU" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón Hữu cơ khoáng 3-2-3+2S+TE</h3>
+                            <p class="product-price">275,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -162,9 +199,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://songgianh.com.vn/upload/attachment/cd%20rau%20copy.jpg" alt="" class="product-img">
+                            <h3 class="product-name">Phân Hữu cơ khoáng sông gianh Chuyên dùng cho các loại rau</h3>
+                            <p class="product-price">175,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -175,9 +212,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://nonggia.vn/upload/attachment/1100phan-bon-huu-co-khoang-ld-mat-1-.png" alt="" class="product-img">
+                            <h3 class="product-name">Phân Bón Hữu cơ khoáng</h3>
+                            <p class="product-price">165,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -188,9 +225,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://ecoz.vn/datafiles/47/2024-01/25212399-37350bf1aaa801f658b9.jpg" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón lá hữu cơ sinh học CNC2 - Chai 1 lít</h3>
+                            <p class="product-price">135,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -201,9 +238,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://huucosinhhoc.com/wp-content/uploads/2021/12/z3064077237647_38bdc57e1e138af144344afe6b4124fc.jpg" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón hữu cơ khoáng Minro 5-5-5 + TE túi 1kg</h3>
+                            <p class="product-price">175,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -214,9 +251,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://tapdoanvinasa.com/wp-content/uploads/2022/05/lon-rau.jpg" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón lá hữu cơ LỚN RAU PLUS • Vinasa Agri</h3>
+                            <p class="product-price">165,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -227,9 +264,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaCR956LsDmY8PuiTggOiEfkeOa7yD0KeLtA&s" alt="" class="product-img">
+                            <h3 class="product-name">Phân Bón Hữu Cơ Vi Sinh Trichoderma - HOVY EPNON</h3>
+                            <p class="product-price">175,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -240,9 +277,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJPWlEzdwjDQNPWzNJVvNzMp8nvkISl7JWIM9cvod2cIgNPa8_Qi__pySaXZLkeXtBUss&usqp=CAU" alt="" class="product-img">
+                            <h3 class="product-name">Phân Bón hữu cơ bón lá </h3>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -253,9 +290,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://dasco.vn/wp-content/uploads/2023/09/DAGACO-25KG-SP-MOI.png" alt="" class="product-img">
+                            <h3 class="product-name">Phân hữu cơ DAGACO</h3>
+                            <p class="product-price">275,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -266,9 +303,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://i0.wp.com/dasco.vn/wp-content/uploads/2023/09/DASVILA-1-1.png?resize=300%2C300&ssl=1" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón hữu cơ - vi sinh</h3>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -279,9 +316,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://nongdientrang.com/wp-content/uploads/2022/01/huu_co_bima_1.webp" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón hữu cơ vi sinh Bima</h3>
+                            <p class="product-price">175,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -292,9 +329,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6FIxQHfdTNL_qfDVxtZdTKBnOrYMFpyi4w&s" alt="" class="product-img">
+                            <h3 class="product-name">Đạm cá Organic 5L - Bảo vệ thực vật Phương Đông</h3>
+                            <p class="product-price">275,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -305,9 +342,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToOsJrv4sAhZCrmhde7RZGVcVjQLCrTmYWzxVtEFfNaOb7PY1bBPx1SdQ7Mm-LvPfe40k&usqp=CAU" alt="" class="product-img">
+                            <h3 class="product-name">Phân bón Hữu cơ vi sinh OBI-Ong Biển</h3>
+                            <p class="product-price">350,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -318,9 +355,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1tHsgxbLyg09jx_fRDocr6unxLc7dke6G0A&s" alt="" class="product-img">
+                            <h3 class="product-name">Đạm Cá N10 (CAN 10 LIT)</h3>
+                            <p class="product-price">375,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -331,9 +368,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://binhdienmekong.vn/wp-content/uploads/Dam_Ca_5L_MT-scaled.jpg" alt="" class="product-img">
+                            <h3 class="product-name">Đầu Trâu đạm cá</h3>
+                            <p class="product-price">275,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -344,9 +381,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <img src="https://nongnghiepbenvung.vn/ckfinder/userfiles/images/57d0459db8e876b62ff9.jpg" alt="" class="product-img">
+                            <h3 class="product-name">PHÂN BÓN HỮU CƠ SIÊU ĐẠM CÁ HỒI - Việt Âu Group</h3>
+                            <p class="product-price"> 175,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -356,32 +393,7 @@
                             </div>
                             <a href="#" class="btn-order">Mua</a>
                         </div>
-                        <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn-order">Mua</a>
-                        </div>
-                        <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn-order">Mua</a>
-                        </div>
+                       
                     </div>
 
                 </section>
@@ -391,9 +403,9 @@
                     <h2>Sản Phẩm</h2>
                     <div class="product-container">
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -404,9 +416,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -417,9 +429,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -430,9 +442,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -443,9 +455,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -456,9 +468,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -469,9 +481,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -482,9 +494,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -495,9 +507,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -508,9 +520,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -521,9 +533,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -534,9 +546,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -547,9 +559,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -560,9 +572,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -573,9 +585,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -586,9 +598,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -599,9 +611,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -612,9 +624,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -625,9 +637,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -638,9 +650,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -651,9 +663,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -664,9 +676,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -677,9 +689,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -690,9 +702,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -702,19 +714,7 @@
                             </div>
                             <a href="#" class="btn-order">Mua</a>
                         </div>
-                        <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn-order">Mua</a>
-                        </div>
+                       
                     </div>
 
                 </section>
@@ -724,9 +724,9 @@
                     <h2>Sản Phẩm</h2>
                     <div class="product-container">
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -737,9 +737,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -750,9 +750,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -763,9 +763,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -776,9 +776,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -789,9 +789,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -802,9 +802,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -815,9 +815,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -828,9 +828,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -841,9 +841,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -854,9 +854,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -867,9 +867,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -880,9 +880,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -893,9 +893,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -906,9 +906,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -919,9 +919,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -932,9 +932,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -945,9 +945,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -958,9 +958,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -971,9 +971,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -984,9 +984,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -997,9 +997,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1010,9 +1010,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1023,22 +1023,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn-order">Mua</a>
-                        </div>
-                        <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1057,9 +1044,23 @@
                     <h2>Sản Phẩm</h2>
                     <div class="product-container">
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn-order">Mua</a>
+                        </div>
+                       
+                        <div class="product-item">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
+                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1070,9 +1071,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1083,9 +1084,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1096,9 +1097,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1109,9 +1110,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1122,9 +1123,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1135,9 +1136,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1148,9 +1149,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1161,9 +1162,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1174,9 +1175,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1187,9 +1188,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1200,9 +1201,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1213,9 +1214,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1226,9 +1227,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1239,9 +1240,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1252,9 +1253,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1265,9 +1266,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1278,9 +1279,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1291,9 +1292,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1304,9 +1305,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1317,9 +1318,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1330,9 +1331,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1343,35 +1344,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn-order">Mua</a>
-                        </div>
-                        <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn-order">Mua</a>
-                        </div>
-                        <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1390,9 +1365,23 @@
                     <h2>Sản Phẩm</h2>
                     <div class="product-container">
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn-order">Mua</a>
+                        </div>
+                       
+                        <div class="product-item">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
+                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1403,9 +1392,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1416,9 +1405,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1429,9 +1418,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1442,9 +1431,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1455,9 +1444,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1468,9 +1457,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1481,9 +1470,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1494,9 +1483,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1507,9 +1496,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1520,9 +1509,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1533,9 +1522,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1546,9 +1535,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1559,9 +1548,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1572,9 +1561,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1585,9 +1574,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1598,9 +1587,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1611,9 +1600,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1624,9 +1613,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1637,9 +1626,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1650,9 +1639,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1663,9 +1652,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -1676,35 +1665,9 @@
                             <a href="#" class="btn-order">Mua</a>
                         </div>
                         <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
+                            <img src="/sanphambanchay4" alt="" class="product-img">
                             <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn-order">Mua</a>
-                        </div>
-                        <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
-                            <div class="product-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn-order">Mua</a>
-                        </div>
-                        <div class="product-item">
-                            <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                            <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
-                            <p class="product-price">75,000 VND</p>
+                            <p class="product-price">75,000 ₫</p>
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>

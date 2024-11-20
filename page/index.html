@@ -20,31 +20,37 @@
         <img src="../image/logo.jpg" alt="Logo" class="logo">
         <nav class="navbar">
             <a class="active" href="#home">Trang Chủ</a>
-            <a href="#introduction"> Giới Thiệu </a>
-            <a href="product.html">Sản Phẩm</a>
+            <a href="#introduction">Giới Thiệu</a>
+            <!-- Sản phẩm với menu thả xuống -->
+            <div class="dropdown">
+                <a href="product.html">Sản Phẩm</a>
+                <div class="dropdown-menu">
+                    <a href="product1.html">Phân bón hữu cơ</a>
+                    <a href="product2.html">Phân bón vô cơ</a>
+                    <a href="product3.html">Phân bón vi sinh</a>
+                </div>
+            </div>
             <a href="#contact">Liên Hệ</a>
-
-
         </nav>
         <div class="icons">
             <i class="fa fa-bars" aria-hidden="true" id="menu-bars"></i>
             <a href="#" class="fas fa-shopping-cart"></a>
             <i class="fas fa-search" aria-hidden="true" id="search-icon"></i>
-
+    
             <!-- Menu tài khoản -->
             <div class="account-menu">
-                <a href="#" class="fas fa-user" id="account-icon"></a>
-                <!-- Menu thả xuống -->
-                <div class="account-dropdown">
-                    <ul>
-                        <li><a href="#login">Đăng nhập</a></li>
-                        <li><a href="#register">Đăng ký</a></li>
-                    </ul>
+                <div class="dropdown">
+                    <a href="#" class="fas fa-user" id="account-icon"></a>
+                    <!-- Menu thả xuống -->
+                    <div class="dropdown-menu">
+                        <a href="login.html">Đăng nhập</a>
+                        <a href="register.html">Đăng ký</a>
+                    </div>
                 </div>
             </div>
         </div>
-
     </header>
+    
     <form action="" id="search-form">
         <input type="search" placeholder="Tìm kiếm tại đây" name="" id="search-box">
         <label for="search-box" class="fas fa-search"></label>
@@ -102,9 +108,8 @@
 
     <section id="best-sellers">
         <h2>Sản phẩm bán chạy</h2>
-
         <div class="product-list">
-            <div class="product-item">
+            <div  class="product-item">
                 <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
                 <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
                 <p class="product-price">75,000 VND</p>

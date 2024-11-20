@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Thanh Toán</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* CSS cơ bản */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .checkout-header {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .checkout-list {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .checkout-list th, .checkout-list td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .checkout-list th {
+            background-color: #f4f4f4;
+        }
+        .product-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .product-price {
+            color: #f44336;
+        }
+        .btn-order {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-order:hover {
+            background-color: #45a049;
+        }
+        .total-section {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        .total-section span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="checkout-header">
+            <h2>Thông Tin Thanh Toán</h2>
+        </div>
+
+        <!-- Danh sách sản phẩm -->
+        <table class="checkout-list">
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Giá</th>
+                    <th>Số Lượng</th>
+                    <th>Tổng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sản phẩm 1 -->
+                <tr>
+                    <td><img src="../image/sanphambanchay4.jpg" class="product-img"></td>
+                    <td class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</td>
+                    <td class="product-price">75,000 ₫</td>
+                    <td><input type="number" value="1" min="1" style="width: 50px; text-align: center;"></td>
+                    <td class="product-price">75,000 ₫</td>
+                </tr>
+                <!-- Sản phẩm 2 -->
+                <tr>
+                    <td><img src="../image/sanphambanchay5.jpg" class="product-img"></td>
+                    <td class="product-name">Phân Bón Organic 100%</td>
+                    <td class="product-price">85,000 ₫</td>
+                    <td><input type="number" value="1" min="1" style="width: 50px; text-align: center;"></td>
+                    <td class="product-price">85,000 ₫</td>
+                </tr>
+                <!-- Thêm sản phẩm khác ở đây -->
+            </tbody>
+        </table>
+
+        <!-- Tổng tiền -->
+        <div class="total-section">
+            <p>Tổng tiền: <span>160,000 ₫</span></p>
+            <a href="#" class="btn-order">Tiến Hành Thanh Toán</a>
+        </div>
+    </div>
+
+</body>
+</html>
