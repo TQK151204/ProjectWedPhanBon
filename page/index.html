@@ -17,7 +17,11 @@
 
 <body>
     <header>
-        <img src="../image/logo.jpg" alt="Logo" class="logo">
+       <div class="logo-container">
+            <img src="../image/logo.jpg" alt="Logo của công ty" class="logo">
+            <span class="logo-caption">Nanotech</span>
+        </div>
+
         <nav class="navbar">
             <a class="active" href="#home">Trang Chủ</a>
             <a href="#introduction">Giới Thiệu</a>
@@ -39,7 +43,6 @@
     
             <!-- Menu tài khoản -->
             <div class="account-menu">
-<<<<<<< HEAD
                 <div class="dropdown">
                     <a href="#" class="fas fa-user" id="account-icon"></a>
                     <!-- Menu thả xuống -->
@@ -47,15 +50,7 @@
                         <a href="login.html">Đăng nhập</a>
                         <a href="register.html">Đăng ký</a>
                     </div>
-=======
-                <a href="#" class="fas fa-user" id="account-icon"></a>
-                <!-- Menu thả xuống -->
-                <div class="account-dropdown">
-                    <ul>
-                        <li><a href="../page/login.html">Đăng nhập</a></li>
-                        <li><a href="../page/register.html">Đăng ký</a></li>
-                    </ul>
->>>>>>> b74b2a1757d7c4e28285e7b26082de500f01e89c
+          
                 </div>
             </div>
         </div>
@@ -116,12 +111,12 @@
 
     </section>
 
-    <section id="best-sellers">
+    <section class="best-sellers" id="best-sellers">
         <h2>Sản phẩm bán chạy</h2>
         <div class="product-list">
-            <div  class="product-item">
+            <div class="product-item">
                 <img src="../image/sanphambanchay4.jpg" alt="" class="product-img">
-                <h3 class="product-name">Phân Bón Powerfeed-Đạm Cá Không Mùi</h3>
+                <h3 class="product-name">Phân Bón Powerfeed - Đạm Cá Không Mùi</h3>
                 <p class="product-price">75,000 VND</p>
                 <div class="product-rating">
                     <i class="fas fa-star"></i>
@@ -129,8 +124,12 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                     <i class="far fa-star"></i>
+                </div> 
+                <div class="button-container">
+                    <a href="#" class="btn-order"><span>Đặt hàng</span></a>
+                    <a href="#" class="btn-add-cart"><span>Thêm vào giỏ hàng</span></a>
                 </div>
-                <a href="#" class="btn-order">Đặt hàng</a>
+                
             </div>
 
             <div class="product-item">
@@ -144,7 +143,11 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn-order">Đặt hàng</a>
+                <div class="button-container">
+                    <a href="#" class="btn-order"><span>Đặt hàng</span></a>
+                    <a href="#" class="btn-add-cart"><span>Thêm vào giỏ hàng</span></a>
+                </div>
+
             </div>
 
             <div class="product-item">
@@ -158,7 +161,11 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn-order">Đặt hàng</a>
+                <div class="button-container">
+                    <a href="#" class="btn-order"><span>Đặt hàng</span></a>
+                    <a href="#" class="btn-add-cart"><span>Thêm vào giỏ hàng</span></a>
+                </div>
+
             </div>
             <div class="product-item">
                 <img src="../image/sanphambanchay3jpg.jpg" alt="" class="product-img">
@@ -171,7 +178,11 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn-order">Đặt hàng</a>
+                <div class="button-container">
+                    <a href="#" class="btn-order"><span>Đặt hàng</span></a>
+                    <a href="#" class="btn-add-cart"><span>Thêm vào giỏ hàng</span></a>
+                </div>
+
             </div>
             <div class="product-item">
                 <img src="../image/sanphambanchay5.jpg" alt="" class="product-img">
@@ -185,14 +196,17 @@
                     <i class="far fa-star"></i>
 
                 </div>
-                <a href="#" class="btn-order">Đặt hàng</a>
+                <div class="button-container">
+                    <a href="#" class="btn-order"><span>Đặt hàng</span></a>
+                    <a href="#" class="btn-add-cart"><span>Thêm vào giỏ hàng</span></a>
+                </div>
             </div>
 
         </div>
 
     </section>
 
-    <section id="knowledge-application  ">
+    <section class="knowledge-application" id="knowledge-application ">
         <h2>Kiến thức và Ứng dụng</h2>
 
         <div class="content-wrapper">
@@ -207,7 +221,7 @@
             </div>
             <div class="image-content">
                 <div class="image-slider">
-                    <img src="../image/pngtree-a-rice-field-with-large-amounts-of-rice-image_10207635.jpg" alt="Lúa" />
+                    <img src="../image/pngtree-a-rice-field-with-large-amounts-of-rice-image_10207635.jpg" alt="" />
                 </div>
             </div>
         </div>
@@ -222,9 +236,9 @@
             <div class="footer-section">
                 <h3>Thông tin liên hệ</h3>
                 <ul>
-                    <li>Địa chỉ: 123 Đường XYZ, TP. Hồ Chí Minh, Việt Nam</li>
+                    <li>Địa chỉ: 123,Q3, TP. Hồ Chí Minh, Việt Nam</li>
                     <li>Điện thoại: <a href="tel:+84987654321">+84 987 654 321</a></li>
-                    <li>Email: <a href="mailto:info@phanbon.com">info@phanbon.com</a></li>
+                    <li>Email: <a href="Nanotech@phanbon.com">Nanotech@phanbon.com</a></li>
                 </ul>
             </div>
 
@@ -253,7 +267,7 @@
 
         <!-- Thông tin bản quyền -->
         <div class="footer-bottom">
-            <p>&copy; 2024 Phân Bón XYZ. All rights reserved.</p>
+            <p>&copy; Phân Bón Nanotech</p>
         </div>
     </footer>
 
