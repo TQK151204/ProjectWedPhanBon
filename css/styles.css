@@ -71,6 +71,9 @@ header {
 
 
 }
+#menu-bars{
+    display: none;
+}
 /* LOGO */
 header .logo-container {
     display: flex; /* Sử dụng flexbox để xếp nội dung theo hàng ngang */
@@ -819,21 +822,20 @@ header .icons .account-menu .dropdown:hover .dropdown-menu {
 
 
 
+/* Body và HTML phải chiếm toàn bộ chiều cao trang */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 
+/* Nội dung chính chiếm khoảng trống trước khi tới footer */
+main {
+    flex: 1;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Phần foter */    
+/* Footer luôn nằm ở cuối */
 #footer {
     background-image: url('../image/unnamed.png');
     background-size: cover;
@@ -844,8 +846,6 @@ header .icons .account-menu .dropdown:hover .dropdown-menu {
     font-family: Arial, sans-serif;
     margin-right: 0;
     box-sizing: border-box;
-    
-
 }
 
 .footer-container {
@@ -917,6 +917,7 @@ header .icons .account-menu .dropdown:hover .dropdown-menu {
     margin: 0;
 }
 
+
 /* Tùy chỉnh thanh cuộn */
 ::-webkit-scrollbar {
     width: 8px;
@@ -947,3 +948,58 @@ header .icons .account-menu .dropdown:hover .dropdown-menu {
 
     }
 }
+
+* Vùng chính */
+main {
+   
+    height: auto;
+}
+
+/* Section Giới thiệu */
+.about-us {
+    background-color: #e8f5e9; /* Màu nền nhạt */
+    padding: 2rem;
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    overflow: hidden;
+}
+
+.about-us-content {
+    display: flex; /* Bố cục ngang giữa văn bản và hình ảnh */
+    align-items: center;
+    gap: 2rem; /* Khoảng cách giữa hai phần */
+    flex-wrap: wrap; /* Đảm bảo responsive khi màn hình nhỏ */
+}
+
+/* Phần văn bản */
+.about-text {
+    flex: 1; /* Văn bản chiếm một phần */
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    color: #004d40; /* Màu xanh đậm */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.about-text p {
+    margin-bottom: 2rem;
+    text-align: justify; /* Căn đều văn bản */
+}
+
+/* Phần hình ảnh */
+.about-image {
+    flex: 1; /* Hình ảnh chiếm một phần */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%; /* Hình ảnh chiếm toàn bộ khung */
+    height: auto; /* Giữ tỉ lệ hình ảnh */
+    border-radius: 8px; /* Bo góc hình ảnh */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng hình ảnh */
+}
+
