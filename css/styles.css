@@ -490,7 +490,7 @@ header .icons .account-menu .dropdown:hover .dropdown-menu {
     content: "";
     position: absolute;
     top: 0;
-    left: 0; /* Bắt đầu từ bên trái */
+    left: 0; 
     width: 0; /* Chiều rộng ban đầu của hiệu ứng */
     height: 100%;
     background-color: var(--green); /* Màu xanh lá cho hiệu ứng */
@@ -508,7 +508,7 @@ header .icons .account-menu .dropdown:hover .dropdown-menu {
  .product-item .button-container .btn-order span, 
  .product-item .button-container .btn-add-cart span {
     position: relative;
-    z-index: 1; /* Nằm trên hiệu ứng nền */
+    z-index: 1; 
     display: inline-block;
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 1; /* Ban đầu hiển thị chữ */
@@ -846,6 +846,7 @@ main {
     font-family: Arial, sans-serif;
     margin-right: 0;
     box-sizing: border-box;
+    
 }
 
 .footer-container {
@@ -1002,4 +1003,120 @@ main {
     border-radius: 8px; /* Bo góc hình ảnh */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng hình ảnh */
 }
+
+
+
+/* contact */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Căn đều khoảng cách giữa các phần */
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+    gap: 20px; /* Khoảng cách giữa các phần */
+}
+
+/* Phần contact-form bên trái */
+.contact-form {
+    flex: 1; /* Phần này chiếm 50% không gian khi có đủ chỗ */
+    min-width: 300px; /* Đảm bảo hiển thị tốt trên màn hình nhỏ */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.contact-container .contact-form h2 {
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    display: inline-block;
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #45a049;
+}
+
+/* Phần contact-info bên phải */
+.contact-container .contact-info {
+    flex: 1; /* Chiếm 50% không gian */
+    min-width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.contact-container .contact-info h2 {
+    color:var(--black); /* Màu tiêu đề */
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Màu sắc cho từng icon */
+.contact-info ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact-info ul li .address-icon {
+    color: #f44336; /* Màu đỏ cho Địa chỉ */
+}
+
+.contact-info ul li .phone-icon {
+    color: #4caf50; /* Màu xanh lá cho Số điện thoại */
+}
+
+.contact-info ul li .email-icon {
+    color: #2196f3; /* Màu xanh dương cho Email */
+}
+
+/* Liên kết Email */
+.contact-info ul li a {
+    color: #2196f3; /* Màu xanh dương cho liên kết email */
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
+}
+
 

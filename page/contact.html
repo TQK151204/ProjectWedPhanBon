@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Nanotech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle"
+        class="acount" />
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+             <img src="../image/logo.jpg" alt="Logo của công ty" class="logo">
+             <span class="logo-caption">Nanotech</span>
+         </div>
+ 
+         <nav class="navbar">
+             <a class="active" href="index.html">Trang Chủ</a>
+             <a href="introduction.html">Giới Thiệu</a>
+             <!-- Sản phẩm với menu thả xuống -->
+             <div class="dropdown">
+                 <a href="product.html">Sản Phẩm</a>
+                 <div class="dropdown-menu">
+                     <a href="product1.html">Phân bón hữu cơ</a>
+                     <a href="product2.html">Phân bón vô cơ</a>
+                     <a href="product3.html">Phân bón vi sinh</a>
+                 </div>
+             </div>
+             <a href="contact.html">Liên Hệ</a>
+         </nav>
+         <div class="icons">
+             <i class="fa fa-bars" aria-hidden="true" id="menu-bars"></i>
+             <a href="../page/cart.html" class="fas fa-shopping-cart"></a>
+             <i class="fas fa-search" aria-hidden="true" id="search-icon"></i>
+     
+             <!-- Menu tài khoản -->
+             <div class="account-menu">
+                 <div class="dropdown">
+                     <a href="#" class="fas fa-user" id="account-icon"></a>
+                     <!-- Menu thả xuống -->
+                     <div class="dropdown-menu">
+                         <a href="login.html">Đăng nhập</a>
+                         <a href="register.html">Đăng ký</a>
+                     </div>
+           
+                 </div>
+             </div>
+         </div>
+     </header>
+     
+     <form action="" id="search-form">
+         <input type="search" placeholder="Tìm kiếm tại đây" name="" id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+         <i class="fas fa-times" id="close"></i>
+     </form>
+     <div class="slide-product">
+        <img src="https://vnmedia2.monkeyuni.net/upload/web/storage_web/08-08-2022_17:30:46_phan-bon-hoa-hoc-0.jpg" alt="">
+        <div class="text-overlay">
+            <p>Liên Hệ </p>
+        </div>
+    </div>
+    <main class="contact-container">
+        <!-- Phần Gửi Thắc Mắc -->
+        <section class="contact-form">
+            <h2>Gửi Thắc Mắc</h2>
+            <form action="/send-contact" method="post">
+                <label for="name">Tên của bạn:</label>
+                <input type="text" id="name" name="name" placeholder="Nhập tên của bạn" required>
+
+                <label for="email">Email của bạn:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+
+                <label for="message">Nội dung:</label>
+                <textarea id="message" name="message" placeholder="Nhập nội dung" rows="5" required></textarea>
+
+                <button type="submit" class="btn-submit">Gửi</button>
+            </form>
+        </section>
+        <section class="contact-info">
+            <h2>Thông Tin Liên Hệ</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-map-marker-alt contact-icon address-icon"></i>
+                    <strong>Địa chỉ:</strong> 123, Q3, TP. Hồ Chí Minh, Việt Nam
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt contact-icon phone-icon"></i>
+                    <strong>Số điện thoại:</strong> <a href="tel:+84987654321">+84 987 654 321</a>
+                </li>
+                <li>
+                    <i class="fas fa-envelope contact-icon email-icon"></i>
+                    <strong>Email:</strong> <a href="mailto:Nanotech@phanbon.com">Nanotech@phanbon.com</a>
+                </li>
+            </ul>
+        </section>
+        
+        
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <!-- Thông tin liên hệ -->
+            <div class="footer-section">
+                <h3>Thông tin liên hệ</h3>
+                <ul>
+                    <li>Địa chỉ: 123,Q3, TP. Hồ Chí Minh, Việt Nam</li>
+                    <li>Điện thoại: <a href="tel:+84987654321">+84 987 654 321</a></li>
+                    <li>Email: <a href="Nanotech@phanbon.com">Nanotech@phanbon.com</a></li>
+                </ul>
+            </div>
+
+            <!-- Liên kết quan trọng -->
+            <div class="footer-section">
+                <h3>Liên kết quan trọng</h3>
+                <ul>
+                    <li><a href="/privacy-policy">Chính sách bảo mật</a></li>
+                    <li><a href="/terms-of-service">Điều khoản sử dụng</a></li>
+                    <li><a href="/faq">Câu hỏi thường gặp</a></li>
+                </ul>
+            </div>
+
+            <!-- Mạng xã hội -->
+            <div class="footer-section">
+                <h3>Liên kết mạng xã hội</h3>
+                <ul class="social-links">
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    </li>
+                    <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Thông tin bản quyền -->
+        <div class="footer-bottom">
+            <p>&copy; Phân Bón Nanotech</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="../js/script.js"> </script>
+</body>
+
+</html>
