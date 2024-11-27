@@ -724,20 +724,15 @@ h2 {
 }
 
 .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Cho phép các sản phẩm tự động xuống dòng */
+    display: grid;    
     justify-content: space-between;
-    /* Căn đều các sản phẩm */
-    gap: 1.5rem;
-    /* Khoảng cách giữa các sản phẩm */
-    row-gap: 50px;
+    grid-template-columns: repeat(4, 1fr); 
     max-width: calc(100% - 500px);
-    /* Giới hạn chiều rộng và trừ lề 250px mỗi bên */
-    margin: 0 auto;
-    /* Căn giữa container */
+    gap: 40px;
     padding-bottom: 10px;
+    margin: 0 auto;
 }
+
 
 .product-item {
     background-color: #fff;
@@ -1475,4 +1470,118 @@ main {
 .total-section .btn-delete-all {
     margin-left: 10px;
     font-size: 0.9rem;
+}
+/* End cart */
+
+/* Check cart */
+/* Phong cách tổng thể */
+#checkout {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#checkout h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Phong cách form */
+.checkout-form .form-group {
+    margin-bottom: 15px;
+}
+
+.checkout-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus,
+.checkout-form select:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Phong cách cho textarea */
+.checkout-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Phong cách dropdown */
+.checkout-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23ccc" d="M2 0L0 2h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+/* Phong cách nút bấm */
+.checkout-form .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-form .btn-submit:hover {
+    background-color: #45a049;
+}
+
+/* Phong cách tóm tắt đơn hàng */
+.order-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.order-summary h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.order-summary p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #666;
+}
+
+.order-summary span {
+    font-weight: bold;
+    color: #000;
 }
