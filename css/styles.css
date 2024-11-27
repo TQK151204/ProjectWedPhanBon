@@ -1414,12 +1414,31 @@ main {
 .product-price {
     color: #f44336;
 }
+.total-section {
+    display: flex;
+    justify-content: flex-end; /* Canh nút về phía bên phải */
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    gap: 10px; /* Khoảng cách giữa các phần tử nếu có nhiều nút */
+}
 
-
+.total-section .btn-order {
+    background-color: var(--green);
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
 .btn-order:hover {
     background-color: #45a049;
 }
+
 
 .total-section {
     text-align: right;
@@ -1429,4 +1448,31 @@ main {
 
 .total-section span {
     font-weight: bold;
+}
+.btn-delete {
+    color: var(--black);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-delete-all {
+    background-color: var(--green);
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete-all:hover {
+    background-color:#45a049;
+}
+
+.total-section .btn-delete-all {
+    margin-left: 10px;
+    font-size: 0.9rem;
 }

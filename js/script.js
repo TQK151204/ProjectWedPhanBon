@@ -52,6 +52,42 @@ window.onload = function() {
   showPage(1);
 };
 
+// Xử lý nút xóa sản phẩm
+const deleteIcons = document.querySelectorAll('.btn-delete'); // Lấy tất cả icon xóa
+deleteIcons.forEach(icon => {
+    icon.addEventListener('click', (e) => {
+        const row = e.target.closest('tr'); // Lấy dòng (row) của sản phẩm
+        row.remove(); // Xóa dòng sản phẩm
+        updateTotal(); // Cập nhật lại tổng tiền
+    });
+});
+
+// Xử lý nút "Xóa Tất Cả"
+const deleteAllButton = document.querySelector('.btn-delete-all');
+deleteAllButton.addEventListener('click', () => {
+    const tableBody = document.querySelector('.checkout-list tbody'); // Lấy phần thân bảng
+    tableBody.innerHTML = ''; // Xóa toàn bộ nội dung
+    updateTotal(); // Đặt tổng tiền về 0
+});
+
+// Hàm cập nhật tổng tiền
+function updateTotal() {
+    const productRows = document.querySelectorAll('.checkout-list tbody tr');
+    let total = 0;
+
+    productRows.forEach(row => {
+        const priceCell = row.querySelector('.product-price'); // Lấy ô giá
+        const quantityInput = row.querySelector('input[type="number"]'); // Lấy input số lượng
+        const price = parseInt(priceCell.textContent.replace(/\D/g, '')); // Loại bỏ ký tự không phải số
+        const quantity = parseInt(quantityInput.value);
+        total += price * quantity;
+    });
+
+    const totalDisplay = document.querySelector('.total-section span');
+    totalDisplay.textContent = total.toLocaleString('vi-VN') + ' ₫'; // Cập nhật tổng tiền
+}
+
+
 
   
 
