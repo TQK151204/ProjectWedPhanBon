@@ -502,6 +502,29 @@ body {
 #content main .table-data .todo .todo-list li:last-child {
 	margin-bottom: 0;
 }
+.stats-container {
+    display: flex; /* Đặt flexbox để sắp xếp ngang */
+    justify-content: space-between; /* Tạo khoảng cách giữa các biểu đồ */
+    gap: 20px; /* Khoảng cách giữa hai phần tử */
+    padding: 20px; /* Cách lề trong */
+}
+
+.product-stats,
+.user-stats-chart {
+    flex: 1; /* Mỗi biểu đồ chiếm đều không gian */
+    max-width: 45%; /* Giới hạn chiều rộng */
+}
+
+.product-stats canvas {
+    width: 100%; /* Để canvas chiếm hết chiều rộng của phần tử chứa */
+    height: 300px; /* Cố định chiều cao */
+}
+
+.user-stats-chart canvas {
+    width: 120px; /* Chiều rộng của biểu đồ hình tròn */
+    height: 120px; /* Chiều cao của biểu đồ hình tròn */
+
+}
 /* MAIN */
 /* CONTENT */
 
