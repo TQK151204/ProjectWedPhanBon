@@ -53,4 +53,6 @@ window.onload = function() {
 };
 
 
-  
+document.querySelector('.btn-buy-now').addEventListener('click', () => {
+  window.location.href = 'checkout.html'; // Đường dẫn đến trang bạn muốn
+});
