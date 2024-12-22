@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styleAdmin.css">
+    <title>Sản Phẩm</title>
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <i class='bx bxs-smile'></i>
+            <span class="text">Admin</span>
+        </a>
+        <ul class="side-menu top">
+            <li>
+                <a href="admin.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="categories.html">
+                    <i class='bx bxs-category'></i>
+                    <span class="text">Danh Mục</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="products.html">
+                    <i class='bx bxs-box'></i>
+                    <span class="text">Sản Phẩm</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Cài Đặt</span>
+                </a>
+            </li>
+            <li>
+                <a href="../page/index.html" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Đăng Xuất</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search here...">
+                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <a href="#" class="notification">
+                <i class='bx bxs-bell'></i>
+                <span class="num">8</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="../image/people.png">
+            </a>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Sản Phẩm</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li><i class='bx bx-chevron-right'></i></li>
+                        <li>
+                            <a class="active" href="#">Sản Phẩm</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <button class="btn-create-product" onclick="toggleForm()">Tạo Sản Phẩm</button>
+                <div class="form-container" id="form-container">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <label for="product-id">ID:</label>
+                        <input type="text" id="product-id" name="product-id" required>
+
+                        <label for="product-name">Tên Sản Phẩm:</label>
+                        <input type="text" id="product-name" name="product-name" required>
+
+                        <label for="product-category">Danh Mục:</label>
+                        <input type="text" id="product-category" name="product-category" required>
+
+                        <label for="product-image">Ảnh:</label>
+                        <input type="file" id="product-image" name="product-image" accept="image/*" required>
+
+                        <label for="product-price">Giá:</label>
+                        <input type="number" id="product-price" name="product-price" required>
+
+                        
+
+                        <div>
+                            <button type="submit" class="btn-submit">Tạo</button>
+                            <button type="button" class="btn-cancel" onclick="toggleForm()">Hủy</button>
+                            <button type="button" class="btn-reset" onclick="resetForm()">Nhập Lại</button>
+                            <!-- Nút Nhập lại -->
+                        </div>
+                    </form>
+                </div>
+                <!-- Danh sách sản phẩm -->
+                <div class="product-list">
+                    <h2>Danh Sách Sản Phẩm</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID Sản Phẩm</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Danh Mục</th>
+                                <th>Ảnh</th>
+                                <th>Giá</th>
+                                <th>Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Áo Thun</td>
+                                <td>Thời Trang</td>
+                                <td><img src="../image/shirt.jpg" alt="Áo Thun" width="50"></td>
+                                <td>100.000 VND</td>
+                                <td>
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Quần Jean</td>
+                                <td>Thời Trang</td>
+                                <td><img src="../image/jeans.jpg" alt="Quần Jean" width="50"></td>
+                                <td>200.000 VND</td>
+                                <td>
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </td>
+                            </tr>
+                            <!-- Thêm các dòng sản phẩm ở đây -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </section>
+    <script>
+        // Function to toggle the form container
+        function toggleForm() {
+            const formContainer = document.getElementById('form-container');
+            formContainer.style.display = formContainer.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Function to reset the form
+        function resetForm() {
+            const form = document.querySelector('#form-container form');
+            form.reset();
+        }
+    </script>
+</body>
+
+</html>
